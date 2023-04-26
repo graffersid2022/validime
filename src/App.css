@@ -1,0 +1,251 @@
+.App {
+  /* text-align: center; */
+  background: linear-gradient(180deg, #07000A 0%, #41007F 52.6%, #07000A 98.96%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+.App-logo {
+  height: 66px;
+  width: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  height: 100px;
+  padding: 0 50px;
+}
+
+.desktop-main-menu {
+  margin-right: 50px;
+}
+
+.desktop-main-menu ul {
+  display: flex;
+}
+
+.desktop-main-menu ul li {
+  position: relative;
+  margin-right: 120px;
+  padding-bottom: 2px;
+}
+
+/* Menu item bottom border */
+.desktop-main-menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-origin: right center;
+}
+
+.desktop-main-menu ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+  transition-duration: 0.4s;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* text-transform: uppercase; */
+}
+
+.section-inner {
+  position: absolute;
+  top: 200px;
+  /* bottom: 400px; */
+  left: 50px;
+  /* max-width: 560px; */
+}
+
+.section-b {
+  position: relative;
+  /* top: 200px; */
+  /* bottom: 400px; */
+  left: 50px;
+  /* max-width: 560px; */
+}
+
+.section-c {
+  position: relative;
+  /* top: 200px; */
+  /* bottom: 400px; */
+  left: 10.80rem;
+  /* max-width: 560px; */
+}
+
+.small-text {
+  font-family: Mulish;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #CBCBD4;
+}
+
+.large-button {
+  height: 100px;
+  width: 350px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  background: linear-gradient(321.06deg, #E72CAD 0.56%, #F97D5E 0.57%, #E033B1 66.61%, #D139E1 95.57%);
+  cursor: pointer;
+  animation: fadeInUp 0.5s ease-in-out 0.4s;
+}
+
+.large-button span {
+  /* font-family: 'Poppins'; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 112%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: 0.5s;
+  /* animation: fadeInUp 0.5s ease-in-out; */
+}
+
+/* .large-button:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+} */
+
+.large-button:hover{
+  background: #F68452;
+}
+
+.large-button:hover span {
+  padding-right: 25px;
+}
+
+.large-button:hover span:after {
+  opacity: 1;
+  right: 0;
+  content: '  >';
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    /* animation: App-logo-spin infinite 20s linear; */
+  }
+}
+
+.App-header {
+  
+  /* min-height: 100vh; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin); */
+  color: white;
+  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.center-text {
+  position: relative;
+  top: 150px;
+  left: 144px;
+  /* max-width: 560px; */
+  overflow: hidden;
+}
+
+.center-text h1 {
+  /* position: absolute;
+  width: 568.22px;
+  height: 44px;
+  left: 705.5px;
+  top: 1138px; */
+
+  font-family: 'Jungle Adventurer';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 112%;
+  /* or 54px */
+
+  letter-spacing: 0.23em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.center-text p {
+  position: relative;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.0625em;
+  line-height: 169.5%;
+  padding-right: 225px;
+  /* or 29px */
+
+
+  /* White 100 */
+
+  color: #FFFFFF;
+}
+
+.section-c-header h1 {
+  font-family: 'Jungle Adventurer';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 107.5%;
+  /* or 103px */
+
+  text-align: center;
+  letter-spacing: 0.115em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
